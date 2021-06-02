@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../../partials/scc-html-head', {
-      metaDescription: 'Get Dave Landry\'s \'Stick With The Trend\' indicators to keep yourself on the right side of the markets',
-      metaOgTitle: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com',
-      metaTwitterTitle: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com',
-      metaOgImage: 'https://d.stockcharts.com/img/plugin-trading-simplified.jpg',
-      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-trading-simplified.jpg',
-      title: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com'
-    }); -%>
+    <% include ../../partials/html-head-meta %>
+    <meta name="description" content="Get Dave Landry's 'Stick With The Trend' indicators to keep yourself on the right side of the markets" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com" />
+    <meta name="twitter:title" content="Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com" />
+    <meta property="og:image" content="https://d.stockcharts.com/img/plugin-trading-simplified.jpg" />
+    <meta name="twitter:image" content="https://d.stockcharts.com/img/plugin-trading-simplified.jpg" />
+
+    <title>Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com</title>
+
+    <% include ../../partials/scc-html-head %>
     <% include ../../partials/scc-html-head-free-plug-in-login-js %>
   </head>
   <body id="page-top">

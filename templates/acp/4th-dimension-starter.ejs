@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../../partials/scc-html-head', {
-      metaDescription: 'Multiple timeframe visualization and analysis in one chart, all made simple with the 4th Dimension Starter Pack plug-in for StockChartsACP',
-      metaOgTitle: '4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com',
-      metaTwitterTitle: '4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com',
-      metaOgImage: 'https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg',
-      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg',
-      title: '4th Dimension Starter Pack by Shaun Downey | ACP Plug-Ins | StockCharts.com'
-    }); -%>
+    <% include ../../partials/html-head-meta %>
+    <meta name="description" content="Multiple timeframe visualization and analysis in one chart, all made simple with the 4th Dimension Starter Pack plug-in for StockChartsACP" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com" />
+    <meta name="twitter:title" content="4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com" />
+    <meta property="og:image" content="https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg" />
+    <meta name="twitter:image" content="https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg" />
+
+    <title>4th Dimension Starter Pack by Shaun Downey | ACP Plug-Ins | StockCharts.com</title>
+
+    <% include ../../partials/scc-html-head %>
     <% include ../../partials/scc-html-head-free-plug-in-login-js %>
   </head>
   <body id="page-top">

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../../partials/scc-html-head', {
-      metaDescription: 'Anticipate trend changes more accurately and confidently with the Real Motion plug-in for StockChartsACP',
-      metaOgTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
-      metaTwitterTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
-      metaOgImage: 'https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
-      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
-      title: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com'
-    }); -%>
+    <% include ../../partials/html-head-meta %>
+    <meta name="description" content="Anticipate trend changes more accurately and confidently with the Real Motion plug-in for StockChartsACP" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com" />
+    <meta name="twitter:title" content="Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com" />
+    <meta property="og:image" content="https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg" />
+    <meta name="twitter:image" content="https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg" />
+
+    <title>Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com</title>
+
+    <% include ../../partials/scc-html-head %>
     <% include ../../partials/scc-html-head-paid-plug-in-login-js %>
   </head>
   <body id="page-top">
