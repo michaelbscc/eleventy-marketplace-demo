@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/scc-html-head', {
+      metaDescription: 'Get Dave Landry\'s \'Stick With The Trend\' indicators to keep yourself on the right side of the markets',
+      metaOgTitle: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-trading-simplified.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-trading-simplified.jpg',
+      title: 'Trading Simplified by Dave Landry | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+    <% include ../../partials/scc-html-head-free-plug-in-login-js %>
+  </head>
+  <body id="page-top">
+    <% include ../../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../../partials/marketplace-header', {
+        plugInName: '"Trading Simplified" by Dave&nbsp;Landry'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-trading-simplified.jpg',
+                  imageAlt: 'Trading Simplified ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../../partials/marketplace-title', {
+                    title: 'Get Dave Landry\'s "Stick With The Trend" indicators to keep yourself on the right side of the markets',
+                    price: 'FREE'
+                  }); -%>
+
+                  <% include ../../partials/free-plug-in-install-btn %>
+
+                  <p>
+                    With Dave Landry's "Trading Simplified" indicator pack, you'll get the same unique indicators that he's used for years to keep himself on the right side of the markets.
+                    A simple, no-nonsense collection of powerful yet easy-to-use indicators, this plug-in for ACP will bring an extra edge to your charting.
+                  </p>
+
+                  <%- include('../../partials/youtube-video', {
+                    youtubeLink: 'https://www.youtube.com/embed/iqk_h70D7PY'
+                  }); -%>
+
+                  <ul>
+                    <li>
+                        <span class="feature-name">1. Landry Light</span>
+                        <span class="feature-description">A trend indicator that stays mostly green in uptrends and mostly red in downtrends. It also shows how long the trend has been in place. This can help to let you know when trends are developing or when they might be a little “long in the tooth” and due to correct. Both SMA-for longer-term market timing, and EMA-for timing markets shorter-term and even intra-day are provided.</span>
+                    </li>
+                    <li>
+                        <span class="feature-name">2. Landry Proper Order</span>
+                        <span class="feature-description">Uses Dave’s Bowtie Moving Averages to let you know when they are in “proper” uptrend (10SMA>20EMA>30EMA) or downtrend (10SMA>20EMA>30EMA) order. Green means up, red means down, and yellow means caution-the market is choppy or the trend could be turning. Like “Landry Light” it also tells you how long the market has been in any of these phases so you’ll  know if the trend is due to correct or possibly due to begin trending again from choppy conditions.</span>
+                    </li>
+                    <li>
+                        <span class="feature-name">3. Percent From Closing High</span>
+                        <span class="feature-description">Markets that are near their closing highs are healthy and those that are moving away from their old closing highs are not. This indicator was originally created as part of the TFM 10% System (see Trading Simplified shows) for longer-term (weekly) market timing, but can also be quite useful in other markets and time frames.</span>
+                    </li>
+                    <li>
+                        <span class="feature-name">4. Percent Of Close</span>
+                        <span class="feature-description">Similar to the "Percent From Closing High indicator but plotted on the chart for a reference. In general, you want to seek to be long when the market is above the “buy line” and out or short when the market is below the “buy line”.</span>
+                    </li>
+                    <li>
+                        <span class="feature-name">5. Landry BowTie</span>
+                        <span class="feature-description">A template that automatically plots the Bowtie Moving averages: 10-SMA, 20-EMA, and 30-EMA. Useful for knowing when the trend might be turning, especially when it is coming off of major highs or lows. Use with “Proper Order” indicator to help gauge how long the market has been trending or if the trend might be turning.</span>
+                    </li>
+                    <li>
+                        <span class="feature-name">6. Landry Volatility</span>
+                        <span class="feature-description">A volatility measurement based on Historical Volatility. Useful for knowing when bottoms may be near during panic situations or if the market has become complacent and due to correct during uptrends.</span>
+                    </li>
+                  </ul>
+
+                  <h2><i class="fas fa-fw fa-user-tie"></i>&nbsp;About The Creator</h2>
+
+                  <p>
+                      <b>Dave Landry</b> has been actively trading the markets since the early 90s.
+                      In 1995, he founded Sentive Trading, LLC - a trading and consulting firm.
+                      He is the author of "Dave Landry on Swing Trading" (2000), "Dave Landry’s 10 Best Swing Trading Patterns & Strategies" (2003), and "The Layman’s Guide to Trading Stocks" (2010).
+                      In addition to his weekly show on StockCharts TV, Dave has made several television appearances, written articles for numerous financial magazines and journals, and has spoken at trading conferences both nationally and internationally.
+                  </p>
+
+                  <% include ../../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/free-plug-in-install-check-js', {
+      plugInId: '3'
+    }); -%>
+  </body>
+</html>

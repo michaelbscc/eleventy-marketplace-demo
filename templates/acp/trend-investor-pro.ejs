@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/scc-html-head', {
+    <%- include('../../partials/scc-html-head', {
       metaDescription: 'Get the edge on trend-following, mean-reversion and volatility with 10 exceptional indicators',
       metaOgTitle: 'Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com',
       metaTwitterTitle: 'Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com',
@@ -9,13 +9,14 @@
       metaTwitterImage: 'https://d.stockcharts.com/img/plugin-trend-investor-pro.jpg',
       title: 'Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com'
     }); -%>
+    <% include ../../partials/scc-html-head-paid-plug-in-login-js %>
   </head>
   <body id="page-top">
-    <% include ../partials/scc-navbar %>
+    <% include ../../partials/scc-navbar %>
 
     <!-- PAGEBODY -->
 	  <div id="pagebody">
-      <%- include('../partials/marketplace-header', {
+      <%- include('../../partials/marketplace-header', {
         plugInName: '"Trend Investor Pro Indicator Edge" by Arthur&nbsp;Hill'
       }); -%>
 
@@ -29,18 +30,20 @@
             <div class="container">
               <div class="row">
 
-                <%- include('../partials/marketplace-product-banner', {
+                <%- include('../../partials/marketplace-product-banner', {
                   imagePath: '//d.stockcharts.com/img/plugin-trend-investor-pro.jpg',
                   imageAlt: 'Trend Investor Pro Indicator Edge ACP Plug-In'
                 }); -%>
 
                 <div class="col-md-8 col-sm-9 col-xs-12 product-body">
-                  <%- include('../partials/marketplace-title', {
+                  <%- include('../../partials/marketplace-title', {
                     title: 'Get the edge on trend-following, mean-reversion and volatility with 10 exceptional indicators',
                     price: '$49.95'
                   }); -%>
 
-                  <%- include('../partials/shopify-buy-btn', {
+                  <% include ../../partials/use-scc-email-message %>
+
+                  <%- include('../../partials/shopify-buy-btn', {
                     productId: '4847075983462',
                     productComponentId: 'product-component-1593400241539'
                   }); -%>
@@ -49,7 +52,7 @@
                     This plug-in is designed to help you trade in the direction of the bigger trend. Define the trend and spot new trends using the unique five-indicator Trend Composite. Identify pullbacks and mean-reversion opportunities using the fully-customizable Momentum Composite. This plugin also includes normalized volatility, normalized rate-of-change and some classic indicators with a distinctive twist.
                   </p>
 
-                  <%- include('../partials/youtube-video', {
+                  <%- include('../../partials/youtube-video', {
                     youtubeLink: 'https://www.youtube.com/embed/qPrUAwx-4Rc'
                   }); -%>
 
@@ -96,12 +99,12 @@
                     </li>
                   </ul>
 
-                  <%- include('../partials/help-center-alert', {
+                  <%- include('../../partials/help-center-alert', {
                     helpCenterLink: 'https://support.stockcharts.com/doku.php?id=acp:plugins:tip',
                     plugInTitle: 'Trend Investor Pro Indicator Edge'
                   }); -%>
 
-                  <%- include('../partials/youtube-video', {
+                  <%- include('../../partials/youtube-video', {
                     youtubeLink: 'https://www.youtube.com/embed/qi5FPu-kMy0'
                   }); -%>
 
@@ -114,23 +117,25 @@
                     In addition to his Chartered Market Technician (CMT) designation, he holds an MBA from the Cass Business School at City University in London.
                   </p>
 
-                  <% include ../partials/plug-in-general-info %>
+                  <% include ../../partials/plug-in-general-info %>
 
                 </div>
               </div>
                   
             </div>
           </div><!-- end of ABOUT PRODUCT -->
-          
+
         </div><!-- end of .CONTAINER-FLUID -->
       </div><!-- end of #PAGECONTENTS -->
     </div><!-- end of #PAGEBODY -->
 
-    <% include ../partials/scc-footer %>
-    <% include ../partials/scc-noscript %>
-    <% include ../partials/plug-in-install-modal %>
-    <% include ../partials/scc-trial-modal %>
-    <% include ../partials/scc-easing-sliding-js %>
-    <% include ../partials/plug-in-install-check-js %>
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/paid-plug-in-install-check-js', {
+      plugInId: '2'
+    }); -%>
   </body>
 </html>

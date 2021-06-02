@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/scc-html-head', {
+    <%- include('../../partials/scc-html-head', {
       metaDescription: 'Trade with the very same charting tools used by world champion trader, Larry Williams',
       metaOgTitle: 'Larry Williams Stock Trading Starter Pack | ACP Plug-Ins | StockCharts.com',
       metaTwitterTitle: 'Larry Williams Stock Trading Starter Pack | ACP Plug-Ins | StockCharts.com',
@@ -9,13 +9,14 @@
       metaTwitterImage: 'https://d.stockcharts.com/img/plugin-larry-williams.jpg',
       title: 'Larry Williams Stock Trading Starter Pack | ACP Plug-Ins | StockCharts.com'
     }); -%>
+    <% include ../../partials/scc-html-head-paid-plug-in-login-js %>
   </head>
   <body id="page-top">
-    <% include ../partials/scc-navbar %>
+    <% include ../../partials/scc-navbar %>
 
     <!-- PAGEBODY -->
 	  <div id="pagebody">
-      <%- include('../partials/marketplace-header', {
+      <%- include('../../partials/marketplace-header', {
         plugInName: 'Larry Williams Stock Trading Starter Pack'
       }); -%>
 
@@ -29,18 +30,20 @@
             <div class="container">
               <div class="row">
 
-                <%- include('../partials/marketplace-product-banner', {
+                <%- include('../../partials/marketplace-product-banner', {
                   imagePath: '//d.stockcharts.com/img/plugin-larry-williams.jpg',
                   imageAlt: 'Larry ACP Plug-In'
                 }); -%>
 
                 <div class="col-md-8 col-sm-9 col-xs-12 product-body">
-                  <%- include('../partials/marketplace-title', {
+                  <%- include('../../partials/marketplace-title', {
                     title: 'Trade with the very same charting tools used by world champion trader, Larry&nbsp;Williams!',
                     price: '$595.00'
                   }); -%>
 
-                  <%- include('../partials/shopify-buy-btn', {
+                  <% include ../../partials/use-scc-email-message %>
+
+                  <%- include('../../partials/shopify-buy-btn', {
                     productId: '4897985822822',
                     productComponentId: 'product-component-1596465473008'
                   }); -%>
@@ -52,7 +55,7 @@
                     All of these tools work on daily and weekly bars, and Larry uses one on intraday charts as&nbsp;well.
                   </p>
 
-                  <%- include('../partials/youtube-video', {
+                  <%- include('../../partials/youtube-video', {
                     youtubeLink: 'https://www.youtube.com/embed/yOXvvWxs1ro'
                   }); -%>
 
@@ -91,7 +94,7 @@
                     </li>
                   </ul>
 
-                  <%- include('../partials/help-center-alert', {
+                  <%- include('../../partials/help-center-alert', {
                     helpCenterLink: 'https://support.stockcharts.com/doku.php?id=acp:plugins:lwstarter',
                     plugInTitle: 'Larry Williams Stock Trading Starter Pack'
                   }); -%>
@@ -107,23 +110,25 @@
                     On October 6, 2002 the mayor of San Diego declared that day as Larry Williams' Day.
                   </p>
 
-                  <% include ../partials/plug-in-general-info %>
+                  <% include ../../partials/plug-in-general-info %>
 
                 </div>
               </div>
-                  
+
             </div>
           </div><!-- end of ABOUT PRODUCT -->
-          
+
         </div><!-- end of .CONTAINER-FLUID -->
       </div><!-- end of #PAGECONTENTS -->
     </div><!-- end of #PAGEBODY -->
 
-    <% include ../partials/scc-footer %>
-    <% include ../partials/scc-noscript %>
-    <% include ../partials/plug-in-install-modal %>
-    <% include ../partials/scc-trial-modal %>
-    <% include ../partials/scc-easing-sliding-js %>
-    <% include ../partials/plug-in-install-check-js %>
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/paid-plug-in-install-check-js', {
+      plugInId: '7'
+    }); -%>
   </body>
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/scc-html-head', {
+      metaDescription: 'Multiple timeframe visualization and analysis in one chart, all made simple with the 4th Dimension Starter Pack plug-in for StockChartsACP',
+      metaOgTitle: '4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: '4th Dimension Starter Pack | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-4th-dimension-starter.jpg',
+      title: '4th Dimension Starter Pack by Shaun Downey | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+    <% include ../../partials/scc-html-head-free-plug-in-login-js %>
+  </head>
+  <body id="page-top">
+    <% include ../../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../../partials/marketplace-header', {
+        plugInName: '"4th Dimension Starter Pack" by Shaun&nbsp;Downey'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-4th-dimension-starter.jpg',
+                  imageAlt: '4th Dimension Starter Pack ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../../partials/marketplace-title', {
+                    title: 'Multiple timeframe visualization and analysis in one chart',
+                    price: 'FREE'
+                  }); -%>
+
+                  <% include ../../partials/free-plug-in-install-btn %>
+
+                  <p>
+                    Shaun Downey, author of "Trading Time: New methods in Technical Analysis" and winner of Technical Book of the Year 2014, Mapping Your Voyage of Discovery, 4th&nbsp;Dimension provides multiple timeframe visualization in one chart to calculate true measures of support and resistance and connect with bespoke divergence patterns, breakout signals and identification of extremes.
+                    Combine all of these for your own trade signal identification including risk management and complete flexibility in the 4th&nbsp;Dimension tools you utilise.
+                    This plug-in includes 30 unique studies and code to mark the chart. 
+                  </p>
+
+                  <ul>
+                    <li>
+                      <span class="feature-name">1. Peak Expansion</span>
+                      <span class="feature-description">Qualifies Significant Swing Points by Measuring the Current Range against the Moving Average of Range on Daily Charts calculating Weekly and Monthly Levels. Has the option to use Heiken Ashi Based High/Lows.  Can be used on Intraday Charts for Short Term Levels</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">2. Range Deviation Pivots</span>
+                      <span class="feature-description">Places 1, 2, and 3 Standard Deviations around the Opening, with an In Built Propriety Algorithm that Creates a Skew for the Current Trend. Provides the Core to the Range Relativity, PowwerPlay and SlammDunk Patterns.</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">3. Time Area Steps Up</span>
+                      <span class="feature-description">Split Into Up and Down, Plus Intraday, Measures the Stepping Process of the Time Area Study from Daily up to Annual in One Visualization.</span>
+                    </li>
+                  </ul>
+
+                  <h2><i class="fas fa-fw fa-user-tie"></i>&nbsp;About The Creator</h2>
+
+                  <p>
+                    <b>Shaun Downey</b> is a trader, private fund manager, commentator, advisor, and a leading exponent in the creation of new technical tools.
+                    He is the author of "Trading Time" and "Mapping Your Voyage of Discovery", winner of the Technical Analysis Book of the Year 2014.
+                    Having analyzed the markets for over 40 years, he recently spent two years building systems with fundamental data and sector rotation which led to the creation of a new set of indicators which will be featured exclusively on StockCharts.
+                    Shaun supports his client base in the use of his unique methods via mentoring, consulting, and ongoing education and analysis.
+                  </p>
+
+                  <% include ../../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/free-plug-in-install-check-js', {
+      plugInId: '4'
+    }); -%>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/scc-html-head', {
+    <%- include('../../partials/scc-html-head', {
       metaDescription: 'Anticipate trend changes more accurately and confidently with the Real Motion plug-in for StockChartsACP',
       metaOgTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
       metaTwitterTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
@@ -9,13 +9,14 @@
       metaTwitterImage: 'https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
       title: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com'
     }); -%>
+    <% include ../../partials/scc-html-head-paid-plug-in-login-js %>
   </head>
   <body id="page-top">
-    <% include ../partials/scc-navbar %>
+    <% include ../../partials/scc-navbar %>
 
     <!-- PAGEBODY -->
 	  <div id="pagebody">
-      <%- include('../partials/marketplace-header', {
+      <%- include('../../partials/marketplace-header', {
         plugInName: '"Real&nbsp;Motion" by MarketGauge'
       }); -%>
 
@@ -29,18 +30,20 @@
             <div class="container">
               <div class="row">
 
-                <%- include('../partials/marketplace-product-banner', {
+                <%- include('../../partials/marketplace-product-banner', {
                   imagePath: '//d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
                   imageAlt: 'MarketGauge Real Motion ACP Plug-In'
                 }); -%>
 
                 <div class="col-md-8 col-sm-9 col-xs-12 product-body">
-                  <%- include('../partials/marketplace-title', {
+                  <%- include('../../partials/marketplace-title', {
                     title: 'Anticipate Trend Changes More Accurately and Confidently With Real&nbsp;Motion',
                     price: '$497.00'
                   }); -%>
 
-                  <%- include('../partials/shopify-buy-btn', {
+                  <% include ../../partials/use-scc-email-message %>
+
+                  <%- include('../../partials/shopify-buy-btn', {
                     productId: '4871055605862',
                     productComponentId: 'product-component-1593400200783'
                   }); -%>
@@ -59,34 +62,36 @@
                     </li>
                   </ul>
 
-                  <%- include('../partials/youtube-video', {
+                  <%- include('../../partials/youtube-video', {
                     youtubeLink: 'https://www.youtube.com/embed/Y4yU9qR1NrY'
                   }); -%>
 
-                  <%- include('../partials/help-center-alert', {
+                  <%- include('../../partials/help-center-alert', {
                     helpCenterLink: 'https://support.stockcharts.com/doku.php?id=acp:plugins:marketgauge',
                     plugInTitle: 'Real Motion'
                   }); -%>
 
-                  <% include ../partials/marketgauge-bio %>
+                  <% include ../../partials/marketgauge-bio %>
 
-                  <% include ../partials/plug-in-general-info %>
+                  <% include ../../partials/plug-in-general-info %>
 
                 </div>
               </div>
-                  
+
             </div>
           </div><!-- end of ABOUT PRODUCT -->
-          
+
         </div><!-- end of .CONTAINER-FLUID -->
       </div><!-- end of #PAGECONTENTS -->
     </div><!-- end of #PAGEBODY -->
 
-    <% include ../partials/scc-footer %>
-    <% include ../partials/scc-noscript %>
-    <% include ../partials/plug-in-install-modal %>
-    <% include ../partials/scc-trial-modal %>
-    <% include ../partials/scc-easing-sliding-js %>
-    <% include ../partials/plug-in-install-check-js %>
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/paid-plug-in-install-check-js', {
+      plugInId: '6'
+    }); -%>
   </body>
 </html>

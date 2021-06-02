@@ -1,0 +1,58 @@
+<script>
+  var jsonDomain = "//" + window.location.hostname;
+
+  $(document).ready(function() {
+    checkInstalled();
+  });
+
+  function checkInstalled() {
+    $.ajax({
+      url: jsonDomain + "/j-mi/mi",
+      dataType: 'json',
+      data: {
+          cmd: "getacp",
+          r: Math.random()
+      },
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function (data) {
+        for (var i = 0; i < data.length; i++) {
+          // SET PLUG-IN ID HERE
+          if (data[i].id == "4" && data[i].installed) {
+            $('#buyButton').html('<i class="fas fa-check-circle"></i>&nbsp;&nbsp;INSTALLED');
+            $('#buyButton').prop('disabled', true);
+          }
+        }
+      },
+      error:function (jqXHR, textStatus, errorThrown) {}
+    });
+  }
+
+  function doInstall() {
+    $.ajax({
+      url: jsonDomain + "/j-mi/mi",
+      dataType: 'json',
+      data: {
+        cmd: "installacp",
+        // SET PLUG-IN ID HERE
+        acpid: "<%= plugInId %>",
+        seenModal: "no",
+        r: Math.random()
+      },
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function (data) {
+        if (data.success) {
+          $('#modal_pluginInstalled').modal("show");
+        } else {
+          alert("Whoops! Look like there was a problem installing this plug-in.  Please try again, and if the problem persists, contact our Support Team.");
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        alert("Whoops! Look like there was a problem installing this plug-in.  Please try again, and if the problem persists, contact our Support Team.");
+      }
+    });
+  }
+</script>

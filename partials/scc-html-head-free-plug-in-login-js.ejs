@@ -1,0 +1,17 @@
+<script data-cfasync="false" type="text/javascript">
+  // LOGGED IN           
+  if (isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').hide();
+      $('#buyButton-wrapper').show();
+    });
+  }
+
+  // LOGGED OUT
+  if (!isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').show();
+      $('#buyButton-wrapper').remove();
+    });
+  }
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/scc-html-head', {
+      metaDescription: '',
+      metaOgTitle: 'The Moxie Indicator by Simpler Trading | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: 'The Moxie Indicator by Simpler Trading | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-simpler-trading-moxie.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-simpler-trading-moxie.jpg',
+      title: 'The Moxie Indicator by Simpler Trading | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+    <% include ../../partials/scc-html-head-paid-plug-in-login-js %>
+  </head>
+  <body id="page-top">
+    <% include ../../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../../partials/marketplace-header', {
+        plugInName: '"The Moxie Indicator" by Simpler&nbsp;Trading'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-simpler-trading-moxie.jpg',
+                  imageAlt: 'The Moxie Indicator ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../../partials/marketplace-title', {
+                    title: 'Pinpoint accurate 20% to 200% "pops and drops". While other traders get stopped out by fakeouts or enter too late, you can achieve faster account&nbsp;gains!',
+                    price: '$497.00'
+                  }); -%>
+
+                  <% include ../../partials/use-scc-email-message %>
+
+                  <%- include('../../partials/shopify-buy-btn', {
+                    productId: '6575516713062',
+                    productComponentId: 'product-component-1622071766377'
+                  }); -%>
+
+                  <p><b>Imagine being able to know with confidence when to stay in a potential "grand&nbsp;slam" trampoline trades and when to bail quickly when a trade doesn't pay&nbsp;off.</b></p>
+                  <p>TG's Moxie Indicator&trade; looks beyond price to identify big moves in stocks before they happen. He wouldn't trade a day without it. It's the secret weapon behind his ability to pick precise stock trades. Besides its ability to pinpoint killer stock trades that follow a strict checklist focusing on account growth, the Moxie&nbsp;Indicator&trade;, and TG's pre-trade checklist help keep him OUT of account-killing trades.</p>
+
+                  <%- include('../../partials/youtube-video', {
+                    youtubeLink: 'https://www.youtube.com/embed/2cQtRneWOyU'
+                  }); -%>
+
+                  <h2><i class="fas fa-fw fa-user-tie"></i>&nbsp;About Simpler Trading</h2>
+
+                  <p>With over 100+ years of combined market experience, the Simpler&nbsp;Trading team is here to help you. While most other services offer "hypothetical" trades and theories, we share our actual trading ideas in real-time. Like you, we have our own money on the line. Because we in the markets, we can lead you to high probability setups, even if you work full-time.</p>
+
+                  <p>Our goal is to help you trade confidently by reducing your tuition to the market. The markets are challenging and they are constantly throwing curveballs, some of which will bean us right in the face. That's why we trade together. So we can share what's working for us in real-time and our collective experience as a group can give us what all traders need to succeed: <b>A proven&nbsp;EDGE.</b></p>
+
+                  <% include ../../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/paid-plug-in-install-check-js', {
+      plugInId: '9'
+    }); -%>
+  </body>
+</html>

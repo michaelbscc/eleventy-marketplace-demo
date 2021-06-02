@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/scc-html-head', {
+      metaDescription: 'Boost your charting power and sharpen your analysis with our free Advanced Indicator Pack, exclusively for StockCharts Members.',
+      metaOgTitle: 'Advanced Indicator Pack | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: 'Advanced Indicator Pack | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-advanced-indicator-pack.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-advanced-indicator-pack.jpg',
+      title: 'Advanced Indicator Pack | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+    <% include ../../partials/scc-html-head-free-plug-in-login-js %>
+  </head>
+  <body id="page-top">
+    <% include ../../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../../partials/marketplace-header', {
+        plugInName: 'StockCharts Advanced Indicator Pack'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-advanced-indicator-pack.jpg',
+                  imageAlt: 'StockCharts Advanced Indicator Pack ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../../partials/marketplace-title', {
+                    title: 'Boost your charting power and sharpen your analysis with our <u>free</u> "Advanced Indicator Pack", exclusively for StockCharts Members',
+                    price: 'FREE'
+                  }); -%>
+
+                  <% include ../../partials/free-plug-in-install-btn %>
+
+                  <p>
+                    As an exclusive bonus only for StockCharts Members, you can instantly enhance your ACP experience by installing our free "Advanced Indicator Pack".
+                    Add now and you'll automatically unlock the following seven indicators for use in ACP:
+                  </p>
+
+                  <ul>
+                      <li>
+                          <span class="feature-name">1. Double Exponential Moving Average (DEMA)</span>
+                          <span class="feature-description">A faster moving average calculation that places more weight on recent values in order to remove the traditional lag in Moving Averages</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">2. Triple Exponential Moving Average (TEMA)</span>
+                          <span class="feature-description">An even faster moving average calculation that creates a signifcantly more responsive Moving Average indicator</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">3. Distance from Moving Average</span>
+                          <span class="feature-description">The percentage difference between price and a Moving Average of your choice, displayed above or below a zero line</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">4. ConnorsRSI</span>
+                          <span class="feature-description">A momentum oscillator created from the composite of RSI, ROC and Up/Down Length, developed by Larry Connors</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">5. Hull Moving Average</span>
+                          <span class="feature-description">A more responsive Moving Average calculation developed by Alan Hull that weights recent prices more heavily than those earlier in the period</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">6. Balance of Power</span>
+                          <span class="feature-description">A measurement of buying and selling pressures designed to indicate which side is in greater control and driving price action</span>
+                      </li>
+                      <li>
+                          <span class="feature-name">7. TTM Squeeze</span>
+                          <span class="feature-description">A momentum indicator used to identify periods of consolidation and indicate the likely direction of the resulting move</span>
+                      </li>
+                  </ul>
+
+                  <% include ../../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/free-plug-in-install-check-js', {
+      plugInId: '1'
+    }); -%>
+  </body>
+</html>

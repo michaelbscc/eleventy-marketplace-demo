@@ -1,0 +1,55 @@
+<script>
+  var jsonDomain = "//" + window.location.hostname;
+
+  $(document).ready(function() {
+    checkInstalled();
+  });
+
+  function getCBPortal() {
+    $.ajax({
+      url: "https://stockcharts.com/j-hooks/hooks",
+      dataType: 'json',
+      data: {
+        cmd: "getcbportal",
+        cbr: window.location.href,
+        r: Math.random()
+      },
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function (data) {
+        var url = data.url;
+        if (url != undefined) {
+          window.location = url;
+        } else {
+          // Not logged in or can't find CB customer info (different email used?)
+        }
+      },
+      error:function (jqXHR, textStatus, errorThrown) {}
+    });
+  }
+
+  function checkInstalled() {
+    $.ajax({
+      url: jsonDomain + "/j-mi/mi",
+      dataType: 'json',
+      data: {
+        cmd: "getacp",
+        r: Math.random()
+      },
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function (data) {
+        for (var i = 0; i < data.length; i++) {
+          // SET PLUG-IN ID HERE
+          if (data[i].id == "<%= plugInId %>" && data[i].installed) {
+            $('#shopfiy-wrapper').remove();
+            $('#installedButton-wrapper').show();
+          }
+        }
+      },
+      error:function (jqXHR, textStatus, errorThrown) {}
+    });
+  }
+</script>
