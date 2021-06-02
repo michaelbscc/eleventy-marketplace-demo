@@ -1,0 +1,83 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="<%= metaDescription %>" />
+<meta name="keywords" content="" />
+
+<meta property="og:title" content="<%= metaOgTitle %>" />
+<meta name="twitter:title" content="<%= metaTwitterTitle %>" />
+<meta property="og:image" content="<%= metaOgImage %>" />
+<meta name="twitter:image" content="<%= metaTwitterImage %>" />
+
+<!-- BLOCK NON-SECURE REQUESTS -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; img-src 'self' data: https:; default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'" />
+<link rel="shortcut icon" href="//d.stockcharts.com/favicon.gif" type="image/gif" />
+
+<title><%= title %></title>
+
+<!-- BOOTSTRAP -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<!-- SITEWIDE FONTS -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,400i,700,900|Roboto+Condensed:400,400i,700" rel="stylesheet" />
+<!-- SCC ICONS -->
+<link href="//stockcharts.com/css/lib/scc-icons-square.css" rel="stylesheet" type="text/css" />
+<!-- CSS (SHARED) -->
+<link href="//d.stockcharts.com/css/scc-universal.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//d.stockcharts.com/css/landing.css?v=2019051501" rel="stylesheet" type="text/css" media="all" />
+<!-- FONT AWESOME -->
+<script src="https://kit.fontawesome.com/192489156d.js" crossorigin="anonymous"></script>
+<!-- JS (SHARED) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//d.stockcharts.com/js/scc-universal.js" type="text/javascript"></script>
+<!-- ANIMATED SCROLL -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript" async></script>
+
+<!-- CSS (CUSTOM) -->
+<link href="//d.stockcharts.com/css/marketplace.css?v=2020061201" rel="stylesheet" type="text/css" media="all" />
+
+<script data-cfasync="false" type="text/javascript">
+  // display User ID
+  function afterSccLoginFN() {
+    var userId;
+
+    if (window.miJson && typeof window.miJson === 'object') {
+      userId = window.miJson.userId;
+    } else {
+      var miLoginCookie = SCC.cookie.read('mil');
+
+      if (miLoginCookie) {
+        var miJsonStr = atob(miLoginCookie);
+        var miJson = JSON.parse(miJsonStr);
+        userId = miJson.userId;
+      }
+    }
+
+    if (typeof userId === 'string' && userId.trim().length > 0) {
+      var el = $('#user-id');
+
+      if (el && typeof el.text === 'function') {
+        el.text(userId.trim());
+      }
+    }
+  }
+
+  // LOGGED IN
+  if (isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').hide();
+      $('#buyButton-wrapper').show();
+      $('#id-alert').show();
+      afterSccLoginFN();
+    });
+  }
+
+  // LOGGED OUT
+  if (!isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').show();
+      $('#buyButton-wrapper').remove();
+      $('#id-alert').remove();
+    });
+  }
+</script>

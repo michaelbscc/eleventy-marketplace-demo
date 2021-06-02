@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/scc-html-head', {
+      metaDescription: 'Discover hidden strength or weakness in the ptice and volume trends of stocks and ETFs with the Triple Play Indicators plug-in for StockChartsACP',
+      metaOgTitle: 'Triple Play Indicators by MarketGauge | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: 'Triple Play Indicators by MarketGauge | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-marketgauge-triple-play.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-marketgauge-triple-play.jpg',
+      title: 'Triple Play Indicators by MarketGauge | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+  </head>
+  <body id="page-top">
+    <% include ../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../partials/marketplace-header', {
+        plugInName: '"Triple Play Indicators" by MarketGauge'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-marketgauge-triple-play.jpg',
+                  imageAlt: 'MarketGauge Triple Play Indicators ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../partials/marketplace-title', {
+                    title: 'Discover Hidden Strength or Weakness In The Price and Volume Trends of Stocks and&nbsp;ETFs',
+                    price: '$497.00'
+                  }); -%>
+
+                  <%- include('../partials/shopify-buy-btn', {
+                    productId: '4871053967462',
+                    productComponentId: 'product-component-1593400074652'
+                  }); -%>
+
+                  <p>
+                    The best trend trades are in the stocks and ETFs that are leading the market up (or down).
+                    The trades are even more reliable when they have supporting volume trends powering the move.
+                    The Triple Play plug-in enables you to quickly identify the trends in stocks and ETFs that have the strength to continue or hidden weakness that is likely to lead to an unexpected reversal.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <span class="feature-name">MarketGauge Leadership Line</span>
+                      <span class="feature-description">This trend indicator measures leadership in multiple time frames so you can see emerging leaders and failing trends before the rest of the market. With this indicator, you’ll easily spot the stocks and ETFs with strong leadership trends that often become the market's biggest winners.</span>
+                    </li>
+
+                    <li>
+                      <span class="feature-name">MarketGauge Volume Trend Line</span>
+                      <span class="feature-description">This unique volume trend strength indicator enables you to confirm the strength of price trends and identify bullish and bearish conditions developing before they show up in the price trend. With this indicator, you won’t have to analyze volume bars to know when the volume activity is bullish or bearish.</span>
+                    </li>
+
+                    <li>
+                      <span class="feature-description">When you combine MarketGauge's Leadership Line and Volume Trend Line indicators with simple patterns in the standard Bollinger Bands, you’ll find setups that lead explosive moves that we call Triple Play Trades.</span>
+                    </li>
+                  </ul>
+
+                  <%- include('../partials/youtube-video', {
+                    youtubeLink: 'https://www.youtube.com/embed/Y4yU9qR1NrY'
+                  }); -%>
+
+                  <%- include('../partials/help-center-alert', {
+                    helpCenterLink: 'https://support.stockcharts.com/doku.php?id=acp:plugins:marketgauge',
+                    plugInTitle: 'Triple Play Indicators'
+                  }); -%>
+
+                  <% include ../partials/marketgauge-bio %>
+
+                  <% include ../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+                  
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+          
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../partials/scc-footer %>
+    <% include ../partials/scc-noscript %>
+    <% include ../partials/plug-in-install-modal %>
+    <% include ../partials/scc-trial-modal %>
+    <% include ../partials/scc-easing-sliding-js %>
+    <% include ../partials/plug-in-install-check-js %>
+  </body>
+</html>

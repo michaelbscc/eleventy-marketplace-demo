@@ -1,0 +1,118 @@
+<!-- SCC NAVBAR -->
+<nav id="scc-navbar" class="navbar navbar-inverse navbar-blue navbar-static-top">
+  <div class="container-fluid">
+    <!-- NAV UPPER -->
+    <div id="nav-upper" class="row">
+      <!-- NAVBAR BRAND -->
+      <a href="/" class="navbar-brand">
+        <img src="//d.stockcharts.com/img/scc-logo-light.png" alt="StockCharts Logo" class="navbar-logo" />
+        <img src="//d.stockcharts.com/img/scc-logo-icon.png" alt="StockCharts Icon" class="navbar-logo logo-icon" />
+      </a>
+      <!-- MENU TOGGLE -->
+      <div id="nav-menuToggle" class="nav navbar-nav">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menuCollapse" aria-expanded="false" aria-controls="navbar-menuCollapse"><i class="fas fa-bars"></i></button>
+      </div>
+      <!-- ACCOUNT LINKS -->
+      <ul id="nav-accountLinks" class="nav navbar-nav">
+        <li id="nav-loginBtn">
+          <a href="/login" class="btn navbar-btn btn-transparent">Log In</a>
+        </li>
+        <li id="nav-signUpBtn">
+          <a href="/checkout/freetrial/" class="btn navbar-btn btn-green">Free Trial</a>
+        </li>
+        <li id="nav-userProfile" class="dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-user-circle"></i><span id="nav-userID">Welcome</span><i class="far fa-fw fa-angle-down"></i>
+          </a>
+          <ul id="nav-userMenu" class="dropdown-menu">
+            <li><a href="/def/servlet/Favorites.CServlet#chartlists"><i class="fas fa-fw fa-user-chart"></i>&nbsp;&nbsp;Your ChartLists</a></li>
+            <li><a href="/def/servlet/ScanUI"><i class="fal fa-fw fa-sliders-h"></i>&nbsp;&nbsp;Your Scans</a></li>
+            <li><a href="/h-mem/useralertsummary.html"><i class="far fa-fw fa-bell"></i>&nbsp;&nbsp;Your Alerts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/youracct"><i class="fas fa-fw fa-cogs"></i>&nbsp;&nbsp;Your Account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://support.stockcharts.com"><i class="fas fa-fw fa-question-circle"></i>&nbsp;&nbsp;Support Center</a></li>
+            <li><a href="/support/techsupport.html"><i class="far fa-fw fa-envelope"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/logout"><i class="fas fa-fw fa-sign-out-alt"></i>&nbsp;&nbsp;Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- CHART SEARCH -->
+      <form id="nav-chartSearch" class="input-group" role="search" onsubmit="return chartSearch('nav-chartSearch');">
+        <div class="input-group-btn dropdown">
+          <button type="button" id="nav-chartSearch-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SharpChart <i class="far fa-angle-down"></i>
+          </button>
+          <input type="hidden" id="nav-chartSearch-type" name="searchoptions" value="sharpChart" />
+          <ul class="dropdown-menu" id="nav-chartSearch-menu">
+            <li>
+              <a href="#" data-val="symSum">
+                <span class="item-label"><i class="far fa-file-invoice-dollar"></i>Symbol Summary</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="sharpChart">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-sharp"></i>SharpChart</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="acp">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-acp"></i>ACP</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="pnf">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-pnf"></i>Point &amp; Figure</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="gallery">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-gallery"></i>GalleryView</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#" data-val="perf"><i class="icon icon-scc-pos-sq-perfchart"></i>PerfChart</a></li>
+            <li><a href="#" data-val="candleGlance"><i class="icon icon-scc-pos-sq-candle"></i>CandleGlance</a></li>
+            <li><a href="#" data-val="seasonality"><i class="icon icon-scc-pos-sq-season"></i>Seasonality</a></li>
+            <li><a href="#" data-val="rrg"><i class="icon icon-scc-pos-sq-rrg"></i>RRG</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-val="symSearch"><i class="fas fa-search-plus"></i>Symbol Lookup</a></li>
+          </ul>
+        </div>
+        <input type="text" id="nav-chartSearch-input" class="form-control" placeholder="Enter Symbol or Name" aria-label="..." />
+        <span class="input-group-btn">
+          <button id="nav-chartSearch-submit" class="btn btn-default btn-submit" type="submit">Go</button>
+        </span>
+      </form>
+    </div><!-- end of NAV UPPER -->
+    <!-- NAV LOWER -->
+    <div id="nav-lower">
+      <!-- MENU COLLAPSE -->
+      <div id="navbar-menuCollapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav sitelinks">
+          <li><a href="/freecharts/">Charts &amp; Tools</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="/tv/">StockCharts TV <span class="label label-tv-live">LIVE</span></a></li>
+          <li><a href="https://school.stockcharts.com">ChartSchool</a></li>
+          <li class="dashboard"><a href="/def/servlet/Favorites.CServlet">Your Dashboard</a></li>
+        </ul>
+        <ul class="nav navbar-nav sitelinks pull-right">
+          <li><a href="https://support.stockcharts.com">Help</a></li>
+        </ul>
+        <div id="nav-siteSearch-wrap">
+          <form id="nav-siteSearch" role="search" action="/search/">
+            <input type="search" id="nav-siteSearch-input" placeholder="Search StockCharts" name="q" required />
+            <input type="submit" id="nav-siteSearch-submit" value="Go" />
+            <span id="nav-siteSearch-icon"></span>
+          </form>
+        </div>
+      </div><!-- end of MENU COLLAPSE -->
+    </div><!-- end of NAV LOWER -->
+  </div>
+</nav><!-- end of SCC NAVBAR -->

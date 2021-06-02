@@ -1,0 +1,29 @@
+<script>
+  var jsonDomain = "//"+window.location.hostname;
+  
+  $(document).ready(function() {
+    checkInstalled();
+  });
+  
+  function checkInstalled() {
+    $.ajax({
+      url: jsonDomain + "/j-mi/mi",
+      dataType: 'json',
+      data: {
+        cmd: "getacp",
+        r: Math.random()
+      },
+      xhrFields: {withCredentials: true},
+      success: function (data) {
+        for (var i = 0; i < data.length; i++) {
+          // SET PLUG-IN ID HERE
+          if (data[i].id == "7" && data[i].installed) {
+            $('#shopfiy-wrapper').remove();
+            $('#installedButton-wrapper').show();
+          }
+        }
+      }, 
+      error: function (jqXHR, textStatus, errorThrown) {}
+    });
+  }
+</script>

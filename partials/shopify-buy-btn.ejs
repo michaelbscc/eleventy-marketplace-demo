@@ -1,0 +1,199 @@
+<div id="buyButton-wrapper" class="btn-row">
+  <!-- INSTALLED WRAPPER -->
+  <div id="installedButton-wrapper" style="display:none;">
+    <button type="button" id="installedButton" class="btn btn-green btn-rounded btn-md btn-margin-0" disabled=""><i class="fas fa-check-circle"></i>&nbsp;&nbsp;INSTALLED</button>
+  </div>
+
+  <!-- SHOPIFY WRAPPER -->
+  <div id="shopfiy-wrapper">
+    <div id="<%= productComponentId %>"></div>
+    <script type="text/javascript">
+      /*<![CDATA[*/
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'stockcharts.myshopify.com',
+            storefrontAccessToken: 'cc5858980e011b24f9d84f24412aa832',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+              id: '<%= productId %>',
+              node: document.getElementById('<%= productComponentId %>'),
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: {
+                "product": {
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "calc(25% - 20px)",
+                        "margin-left": "20px",
+                        "margin-bottom": "50px"
+                      }
+                    },
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px",
+                      "padding-left": "60px",
+                      "padding-right": "60px"
+                    },
+                    "quantityInput": {
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px"
+                    }
+                  },
+                  "buttonDestination": "checkout",
+                  "contents": {
+                    "img": false,
+                    "title": false,
+                    "price": false
+                  },
+                  "text": {
+                    "button": "Buy Now"
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                },
+                "productSet": {
+                  "styles": {
+                    "products": {
+                      "@media (min-width: 601px)": {
+                        "margin-left": "-20px"
+                      }
+                    }
+                  }
+                },
+                "modalProduct": {
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "button": false,
+                    "buttonWithQuantity": true
+                  },
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "100%",
+                        "margin-left": "0px",
+                        "margin-bottom": "0px"
+                      }
+                    },
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px",
+                      "padding-left": "60px",
+                      "padding-right": "60px"
+                    },
+                    "quantityInput": {
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px"
+                    }
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ],
+                  "text": {
+                    "button": "Add to cart"
+                  }
+                },
+                "cart": {
+                  "styles": {
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px"
+                    }
+                  },
+                  "text": {
+                    "total": "Subtotal",
+                    "button": "Checkout"
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                },
+                "toggle": {
+                  "styles": {
+                    "toggle": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "background-color": "#219155",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      }
+                    },
+                    "count": {
+                      "font-size": "16px"
+                    }
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                }
+              },
+            });
+          });
+        }
+      })();
+      /*]]>*/
+    </script>
+  </div>
+</div>
+
+<div id="freeButton-wrapper" class="btn-row">
+  <button type="button" class="btn btn-green btn-rounded btn-md btn-margin-0" data-toggle="modal" data-target="#modal_sccTrial">Buy Now</button>
+</div>

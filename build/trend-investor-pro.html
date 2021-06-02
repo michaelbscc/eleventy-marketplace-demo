@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Get the edge on trend-following, mean-reversion and volatility with 10 exceptional indicators" />
+<meta name="keywords" content="" />
+
+<meta property="og:title" content="Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com" />
+<meta name="twitter:title" content="Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com" />
+<meta property="og:image" content="https://d.stockcharts.com/img/plugin-trend-investor-pro.jpg" />
+<meta name="twitter:image" content="https://d.stockcharts.com/img/plugin-trend-investor-pro.jpg" />
+
+<!-- BLOCK NON-SECURE REQUESTS -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; img-src 'self' data: https:; default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'" />
+<link rel="shortcut icon" href="//d.stockcharts.com/favicon.gif" type="image/gif" />
+
+<title>Trend Investor Pro Indicator Edge by Arthur Hill | ACP Plug-Ins | StockCharts.com</title>
+
+<!-- BOOTSTRAP -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<!-- SITEWIDE FONTS -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,400i,700,900|Roboto+Condensed:400,400i,700" rel="stylesheet" />
+<!-- SCC ICONS -->
+<link href="//stockcharts.com/css/lib/scc-icons-square.css" rel="stylesheet" type="text/css" />
+<!-- CSS (SHARED) -->
+<link href="//d.stockcharts.com/css/scc-universal.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//d.stockcharts.com/css/landing.css?v=2019051501" rel="stylesheet" type="text/css" media="all" />
+<!-- FONT AWESOME -->
+<script src="https://kit.fontawesome.com/192489156d.js" crossorigin="anonymous"></script>
+<!-- JS (SHARED) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//d.stockcharts.com/js/scc-universal.js" type="text/javascript"></script>
+<!-- ANIMATED SCROLL -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript" async></script>
+
+<!-- CSS (CUSTOM) -->
+<link href="//d.stockcharts.com/css/marketplace.css?v=2020061201" rel="stylesheet" type="text/css" media="all" />
+
+<script data-cfasync="false" type="text/javascript">
+  // display User ID
+  function afterSccLoginFN() {
+    var userId;
+
+    if (window.miJson && typeof window.miJson === 'object') {
+      userId = window.miJson.userId;
+    } else {
+      var miLoginCookie = SCC.cookie.read('mil');
+
+      if (miLoginCookie) {
+        var miJsonStr = atob(miLoginCookie);
+        var miJson = JSON.parse(miJsonStr);
+        userId = miJson.userId;
+      }
+    }
+
+    if (typeof userId === 'string' && userId.trim().length > 0) {
+      var el = $('#user-id');
+
+      if (el && typeof el.text === 'function') {
+        el.text(userId.trim());
+      }
+    }
+  }
+
+  // LOGGED IN
+  if (isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').hide();
+      $('#buyButton-wrapper').show();
+      $('#id-alert').show();
+      afterSccLoginFN();
+    });
+  }
+
+  // LOGGED OUT
+  if (!isLoggedIn()) {
+    $(document).ready(function() {
+      $('#freeButton-wrapper').show();
+      $('#buyButton-wrapper').remove();
+      $('#id-alert').remove();
+    });
+  }
+</script>
+  </head>
+  <body id="page-top">
+    <!-- SCC NAVBAR -->
+<nav id="scc-navbar" class="navbar navbar-inverse navbar-blue navbar-static-top">
+  <div class="container-fluid">
+    <!-- NAV UPPER -->
+    <div id="nav-upper" class="row">
+      <!-- NAVBAR BRAND -->
+      <a href="/" class="navbar-brand">
+        <img src="//d.stockcharts.com/img/scc-logo-light.png" alt="StockCharts Logo" class="navbar-logo" />
+        <img src="//d.stockcharts.com/img/scc-logo-icon.png" alt="StockCharts Icon" class="navbar-logo logo-icon" />
+      </a>
+      <!-- MENU TOGGLE -->
+      <div id="nav-menuToggle" class="nav navbar-nav">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menuCollapse" aria-expanded="false" aria-controls="navbar-menuCollapse"><i class="fas fa-bars"></i></button>
+      </div>
+      <!-- ACCOUNT LINKS -->
+      <ul id="nav-accountLinks" class="nav navbar-nav">
+        <li id="nav-loginBtn">
+          <a href="/login" class="btn navbar-btn btn-transparent">Log In</a>
+        </li>
+        <li id="nav-signUpBtn">
+          <a href="/checkout/freetrial/" class="btn navbar-btn btn-green">Free Trial</a>
+        </li>
+        <li id="nav-userProfile" class="dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-user-circle"></i><span id="nav-userID">Welcome</span><i class="far fa-fw fa-angle-down"></i>
+          </a>
+          <ul id="nav-userMenu" class="dropdown-menu">
+            <li><a href="/def/servlet/Favorites.CServlet#chartlists"><i class="fas fa-fw fa-user-chart"></i>&nbsp;&nbsp;Your ChartLists</a></li>
+            <li><a href="/def/servlet/ScanUI"><i class="fal fa-fw fa-sliders-h"></i>&nbsp;&nbsp;Your Scans</a></li>
+            <li><a href="/h-mem/useralertsummary.html"><i class="far fa-fw fa-bell"></i>&nbsp;&nbsp;Your Alerts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/youracct"><i class="fas fa-fw fa-cogs"></i>&nbsp;&nbsp;Your Account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://support.stockcharts.com"><i class="fas fa-fw fa-question-circle"></i>&nbsp;&nbsp;Support Center</a></li>
+            <li><a href="/support/techsupport.html"><i class="far fa-fw fa-envelope"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/logout"><i class="fas fa-fw fa-sign-out-alt"></i>&nbsp;&nbsp;Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- CHART SEARCH -->
+      <form id="nav-chartSearch" class="input-group" role="search" onsubmit="return chartSearch('nav-chartSearch');">
+        <div class="input-group-btn dropdown">
+          <button type="button" id="nav-chartSearch-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SharpChart <i class="far fa-angle-down"></i>
+          </button>
+          <input type="hidden" id="nav-chartSearch-type" name="searchoptions" value="sharpChart" />
+          <ul class="dropdown-menu" id="nav-chartSearch-menu">
+            <li>
+              <a href="#" data-val="symSum">
+                <span class="item-label"><i class="far fa-file-invoice-dollar"></i>Symbol Summary</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="sharpChart">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-sharp"></i>SharpChart</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="acp">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-acp"></i>ACP</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="pnf">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-pnf"></i>Point &amp; Figure</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-val="gallery">
+                <span class="item-label"><i class="icon icon-scc-pos-sq-gallery"></i>GalleryView</span>
+                <span class="item-star"><i class="far fa-star"></i></span>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#" data-val="perf"><i class="icon icon-scc-pos-sq-perfchart"></i>PerfChart</a></li>
+            <li><a href="#" data-val="candleGlance"><i class="icon icon-scc-pos-sq-candle"></i>CandleGlance</a></li>
+            <li><a href="#" data-val="seasonality"><i class="icon icon-scc-pos-sq-season"></i>Seasonality</a></li>
+            <li><a href="#" data-val="rrg"><i class="icon icon-scc-pos-sq-rrg"></i>RRG</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-val="symSearch"><i class="fas fa-search-plus"></i>Symbol Lookup</a></li>
+          </ul>
+        </div>
+        <input type="text" id="nav-chartSearch-input" class="form-control" placeholder="Enter Symbol or Name" aria-label="..." />
+        <span class="input-group-btn">
+          <button id="nav-chartSearch-submit" class="btn btn-default btn-submit" type="submit">Go</button>
+        </span>
+      </form>
+    </div><!-- end of NAV UPPER -->
+    <!-- NAV LOWER -->
+    <div id="nav-lower">
+      <!-- MENU COLLAPSE -->
+      <div id="navbar-menuCollapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav sitelinks">
+          <li><a href="/freecharts/">Charts &amp; Tools</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="/tv/">StockCharts TV <span class="label label-tv-live">LIVE</span></a></li>
+          <li><a href="https://school.stockcharts.com">ChartSchool</a></li>
+          <li class="dashboard"><a href="/def/servlet/Favorites.CServlet">Your Dashboard</a></li>
+        </ul>
+        <ul class="nav navbar-nav sitelinks pull-right">
+          <li><a href="https://support.stockcharts.com">Help</a></li>
+        </ul>
+        <div id="nav-siteSearch-wrap">
+          <form id="nav-siteSearch" role="search" action="/search/">
+            <input type="search" id="nav-siteSearch-input" placeholder="Search StockCharts" name="q" required />
+            <input type="submit" id="nav-siteSearch-submit" value="Go" />
+            <span id="nav-siteSearch-icon"></span>
+          </form>
+        </div>
+      </div><!-- end of MENU COLLAPSE -->
+    </div><!-- end of NAV LOWER -->
+  </div>
+</nav><!-- end of SCC NAVBAR -->
+
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <!-- MARKETPLACE HEADER -->
+<header id="marketplace-header" class="header-slim">
+  <div class="container">
+    <div class="img-bg plugins-header-bg"></div>
+    <div class="col-xs-12 text-col">
+      <h3><a href="/marketplace/acp/">ACP Plug-Ins</a></h3>
+      <h1>&#34;Trend Investor Pro Indicator Edge&#34; by Arthur&amp;nbsp;Hill</h1>
+    </div>
+  </div>
+</header><!-- end of MARKETPLACE HEADER -->
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-3 col-xs-12 product-sidebar">
+  <div class="product-banner">
+    <img src="//d.stockcharts.com/img/plugin-trend-investor-pro.jpg" alt="Trend Investor Pro Indicator Edge ACP Plug-In" />
+  </div>
+</div>
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <h2 class="title-blue">Get the edge on trend-following, mean-reversion and volatility with 10 exceptional indicators</h2>
+                            
+<h4 class="plugin-price">Price: <span class="plugin-price">$49.95</span></h4>
+
+<div id="id-alert" class="alert alert-warning" style="margin:30px 0 0 0; font-weight:bold; text-align:left;">
+  <span style="text-decoration:underline; font-weight:900;">IMPORTANT NOTE:</span>
+  <br />
+  Please use the same email address as your StockCharts "User&nbsp;ID" when purchasing this plug-in to make sure that it is installed automatically.
+
+  <br />
+  <br />For reference, your User&nbsp;ID is:
+  <span id="user-id" style="font-weight:900;"></span>
+</div>
+
+                  <div id="buyButton-wrapper" class="btn-row">
+  <!-- INSTALLED WRAPPER -->
+  <div id="installedButton-wrapper" style="display:none;">
+    <button type="button" id="installedButton" class="btn btn-green btn-rounded btn-md btn-margin-0" disabled=""><i class="fas fa-check-circle"></i>&nbsp;&nbsp;INSTALLED</button>
+  </div>
+
+  <!-- SHOPIFY WRAPPER -->
+  <div id="shopfiy-wrapper">
+    <div id="product-component-1593400241539"></div>
+    <script type="text/javascript">
+      /*<![CDATA[*/
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'stockcharts.myshopify.com',
+            storefrontAccessToken: 'cc5858980e011b24f9d84f24412aa832',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+              id: '4847075983462',
+              node: document.getElementById('product-component-1593400241539'),
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: {
+                "product": {
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "calc(25% - 20px)",
+                        "margin-left": "20px",
+                        "margin-bottom": "50px"
+                      }
+                    },
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px",
+                      "padding-left": "60px",
+                      "padding-right": "60px"
+                    },
+                    "quantityInput": {
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px"
+                    }
+                  },
+                  "buttonDestination": "checkout",
+                  "contents": {
+                    "img": false,
+                    "title": false,
+                    "price": false
+                  },
+                  "text": {
+                    "button": "Buy Now"
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                },
+                "productSet": {
+                  "styles": {
+                    "products": {
+                      "@media (min-width: 601px)": {
+                        "margin-left": "-20px"
+                      }
+                    }
+                  }
+                },
+                "modalProduct": {
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "button": false,
+                    "buttonWithQuantity": true
+                  },
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "100%",
+                        "margin-left": "0px",
+                        "margin-bottom": "0px"
+                      }
+                    },
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px",
+                      "padding-left": "60px",
+                      "padding-right": "60px"
+                    },
+                    "quantityInput": {
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px"
+                    }
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ],
+                  "text": {
+                    "button": "Add to cart"
+                  }
+                },
+                "cart": {
+                  "styles": {
+                    "button": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "padding-top": "16px",
+                      "padding-bottom": "16px",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      "background-color": "#219155",
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      },
+                      "border-radius": "5px"
+                    }
+                  },
+                  "text": {
+                    "total": "Subtotal",
+                    "button": "Checkout"
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                },
+                "toggle": {
+                  "styles": {
+                    "toggle": {
+                      "font-family": "Lato, sans-serif",
+                      "font-weight": "bold",
+                      "background-color": "#219155",
+                      ":hover": {
+                        "background-color": "#1e834d"
+                      },
+                      ":focus": {
+                        "background-color": "#1e834d"
+                      }
+                    },
+                    "count": {
+                      "font-size": "16px"
+                    }
+                  },
+                  "googleFonts": [
+                    "Lato"
+                  ]
+                }
+              },
+            });
+          });
+        }
+      })();
+      /*]]>*/
+    </script>
+  </div>
+</div>
+
+<div id="freeButton-wrapper" class="btn-row">
+  <button type="button" class="btn btn-green btn-rounded btn-md btn-margin-0" data-toggle="modal" data-target="#modal_sccTrial">Buy Now</button>
+</div>
+
+                  <p>
+                    This plug-in is designed to help you trade in the direction of the bigger trend. Define the trend and spot new trends using the unique five-indicator Trend Composite. Identify pullbacks and mean-reversion opportunities using the fully-customizable Momentum Composite. This plugin also includes normalized volatility, normalized rate-of-change and some classic indicators with a distinctive twist.
+                  </p>
+
+                  <div class="video-embed">
+  <div class="embed-wrap">
+    <div class="embed-responsive embed-responsive-16by9">
+      <!-- VIDEO EMBED (needs class 'embed-responsive-item') -->
+      <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/qPrUAwx-4Rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+  </div><!-- end of VID BOUND -->
+</div>
+
+                  <ul>
+                    <li>
+                      <span class="feature-name">1. TIP-Trend Composite</span>
+                      <span class="feature-description">A trend indicator that quantifies and aggregates signals in five trend-following indicators (Moving Average Rate-of-Change, CCI Close, Bollinger Bands, Keltner Channels, StochClose)</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">2. TIP-StochClose</span>
+                      <span class="feature-description">Based on the Stochastic Oscillator, a trend-momentum indicator that filters out intraday high-low spikes to improve signal consistency</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">3. TIP-RSI Trend Range</span>
+                      <span class="feature-description">A trend indicator that uses the RSI range over a given timeframe to define uptrends and downtrends</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">4. TIP-Moving Average Trend</span>
+                      <span class="feature-description">A trend indicator that shows when a moving average is rising or falling, and the degree of ascent or descent</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">5. TIP-Momentum Composite</span>
+                      <span class="feature-description">A momentum indicator that quantifies and aggregates overbought/oversold signals in five momentum indicators (RSI, %B, StochClose, CCI Close, Normalized ROC)</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">6. TIP-Percent Above MA</span>
+                      <span class="feature-description">A trend-momentum indicator that measures the percentage distance between two simple moving averages</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">7. TIP-CCI Close</span>
+                      <span class="feature-description">Based on the Commodity Channel Index, a trend momentum indicator that filters out intraday high-low spikes to improve signal consistency</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">8. TIP-Normalized ROC</span>
+                      <span class="feature-description">A momentum indicator that normalizes the absolute rate-of-change using the Average True Range (values can be compared across securities)</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">9. TIP-High Low Range Percent</span>
+                      <span class="feature-description">A volatility indicator that shows when the high-low range narrows or expands</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">10. TIP-Normalized ATR</span>
+                      <span class="feature-description">A volatility indicator that shows the Average True Range as a percentage of price (values can be compared across securities)</span>
+                    </li>
+                  </ul>
+
+                  <div class="alert alert-secondary">
+  <a href="https://support.stockcharts.com/doku.php?id=acp:plugins:tip" target="_blank">Click&nbsp;here</a> for more information about how to use the "Trend Investor Pro Indicator Edge" plug-in.
+  The documentation provided in our Support&nbsp;Center will help make sure you get the most out of this unique ACP&nbsp;plug-in.
+</div>
+
+                  <div class="video-embed">
+  <div class="embed-wrap">
+    <div class="embed-responsive embed-responsive-16by9">
+      <!-- VIDEO EMBED (needs class 'embed-responsive-item') -->
+      <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/qi5FPu-kMy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+  </div><!-- end of VID BOUND -->
+</div>
+
+                  <h2><i class="fas fa-fw fa-user-tie"></i>&nbsp;About The Creator</h2>
+
+                  <p>
+                    <b>Arthur Hill, CMT,</b> is the Chief Technical Strategist at TrendInvestorPro.com.
+                    Arthur combines classical technical analysis with quantitative insights for a systematic approach to analysis, trading and investing.
+                    Leveraging over 25 years of experience in the financial markets, he creates indicators and develops strategies designed to help trend-followers and mean-reversion traders.
+                    In addition to his Chartered Market Technician (CMT) designation, he holds an MBA from the Cass Business School at City University in London.
+                  </p>
+
+                  <h2><i class="fas fa-fw fa-plug"></i>&nbsp;About ACP Plug-Ins</h2>
+
+<p>
+  With exclusive plug-ins from a wide variety of renowned indicator creators, technical experts and charting legends, we've partnered with the industry's best to bring you even more charting power in ACP.
+  By installing any of our unique plug-ins, you can instantly enhance your ACP experience with additional indicators, overlays, chart customizations and more.
+  <br />
+  <br />
+  <b>Please note: the "Trend Investor Pro Indicator&nbsp;Edge" plug-in for ACP is non-refundable.</b>
+</p>
+
+<h2><i class="fas fa-fw fa-info-circle"></i>&nbsp;How It Works</h2>
+
+<p>
+  To install any of our free ACP plug-ins, simply log in to your account, click the install button up above and the plug-in will be instantly added to your ACP experience.
+  The next time you visit ACP, you'll find the contents of your new plug-in right there waiting for you.
+  <br />
+  <br />
+  For any of our for-purchase plug-ins, the process works in a very similar fashion.
+  When you click the "Buy&nbsp;Now" button, a checkout window will pop up on top of the page.
+  Follow the payment steps there to purchase the plug-in, and it will be automatically installed into your account as soon as your checkout is complete. 
+</p>
+
+<h2><i class="fal fa-fw fa-analytics"></i>&nbsp;About StockChartsACP</h2>
+
+<p>
+  StockChartsACP is our new, interactive Advanced Charting Platform.
+  With a feature-rich experience that integrates seamlessly with the entire StockCharts toolkit, ACP is designed to empower YOU - the modern investor.
+  Create advanced technical charts with ease, choosing from dozens of indicators, overlays, display settings and color schemes.
+  Configure and store customizable layouts with multiple charts on your screen at once.
+  With an ultra-dynamic, highly-flexible charting experience, ACP is designed to redefine the way that you see and analyze the financial markets, with more technical tools and capabilities than ever before.
+</p>
+
+
+                </div>
+              </div>
+                  
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+          
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <!-- SCC FOOTER -->
+<footer id="scc-footer" class="footer-blue">
+  <!-- UPPER -->
+  <div id="footer-upper">
+    <div class="container">
+      <!-- NEWSLETTER -->
+      <div id="newsletter">
+        <div class="bg-cw"></div>
+        <div class="col-lg-6 col-md-7 col-xs-12">
+            <h4>Expert market commentary delivered right to your inbox, <span>for free.</span></h4>
+            <p>Sign up for our weekly ChartWatchers Newsletter</p>
+        </div>
+        <div class="input-col col-lg-6 col-md-5 col-xs-12">
+          <!-- MC SIGNUP -->
+          <div id="mc_embed_signup" class="form-group">
+            <form action="https://stockcharts.us17.list-manage.com/subscribe/post?u=3353671ea8af8c5eab80183ab&amp;id=7b214beb69"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+              novalidate
+            >
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group"
+                  style="display:inline-block; vertical-align:middle; width:calc(100% - 110px); margin:0 5px 0 0;">
+                  <input type="email" value="" name="EMAIL" placeholder="Enter Your Email"
+                    class="required email form-control input-lg" id="mce-EMAIL" />
+                </div>
+                <div class="clear btn-row" style="display:inline-block; vertical-align:middle;">
+                  <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe"
+                    class="button btn btn-green btn-rounded btn-md btn-margin-0" />
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                  name="b_3353671ea8af8c5eab80183ab_7b214beb69" tabindex="-1" value=""></div>
+              </div>
+            </form>
+          </div><!-- end of MC SIGNUP -->
+          <div class="more-link">
+            <a href="/newsletter/">Learn&nbsp;More&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end of UPPER -->
+  <!-- LOWER -->
+  <div id="footer-lower">
+    <div class="container">
+      <!-- SITELINKS -->
+      <div id="sitelinks" class="clearfix">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h4>On&nbsp;StockCharts</h4>
+          <ul class="list-unstyled">
+            <li><a href="/freecharts/">Charts &amp; Tools</a></li>
+            <li><a href="/articles/">Articles</a></li>
+            <li><a href="/tv/">StockCharts TV</a></li>
+            <li><a href="https://school.stockcharts.com">ChartSchool</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h4>Members</h4>
+          <ul class="list-unstyled">
+            <li><a href="/def/servlet/Favorites.CServlet">Your Dashboard</a></li>
+            <li><a href="/def/servlet/Favorites.CServlet#chartlists">Your ChartLists</a></li>
+            <li><a href="/def/servlet/ScanUI">Advanced Scans</a></li>
+            <li><a href="/h-mem/useralertsummary.html">Technical Alerts</a></li>
+          </ul>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h4>Help</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://support.stockcharts.com">Support Center</a></li>
+            <li><a href="https://support.stockcharts.com/doku.php?id=faqs">FAQs</a></li>
+            <li><a href="/support/techsupport.html">Contact Us</a></li>
+            <li><a href="/freecharts/catalog/">Symbol Catalog</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h4>Company</h4>
+          <ul class="list-unstyled">
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/press/">Press</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="https://store.stockcharts.com/">StockCharts Store</a></li>
+          </ul>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+      </div>
+      <!-- LOGO -->
+      <div id="logo-col" class="col-xs-12">
+        <a href="/">
+          <img src="//d.stockcharts.com/img/scc-logo-light.png" alt="StockCharts.com Logo" class="footer-logo" />
+        </a>
+        <!-- SOCIAL LINKS -->
+        <ul id="social-links" class="list-inline list-unstyled">
+          <li><a href="https://www.facebook.com/stockchartsdotcom" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/stockcharts" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/user/stockchartscom" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/stockcharts.com-inc." target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <!-- COPYRIGHT -->
+      <div id="copyright-col" class="col-xs-12">
+        <p class="copyright">&copy;&nbsp;StockCharts.com,&nbsp;Inc. All&nbsp;Rights&nbsp;Reserved.</p>
+        <ul class="list-inline list-unstyled">
+          <li><a href="https://support.stockcharts.com/doku.php?id=policies:terms_of_service" target="_blank">Terms&nbsp;of&nbsp;Service</a></li>
+          <li><a href="https://support.stockcharts.com/doku.php?id=policies:privacy_statement" target="_blank">Privacy&nbsp;Statement</a></li>
+          <li><a href="/sitemap.html" target="_blank">Site&nbsp;Map</a></li>
+        </ul>
+      </div>
+      <!-- LEGAL -->
+      <div id="legal-col" class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <p class="legal">Market data provided by <b>Xignite, Inc</b>. Commodity and historical index data provided by <b>Pinnacle Data Corporation</b>. Cryptocurrency data provided by <b>CryptoCompare</b>. Unless otherwise indicated, all data is delayed by 15 minutes. The information provided by StockCharts.com, Inc. is not investment advice. Trading and investing in financial markets involves risk. You are responsible for your own investment&nbsp;decisions.</p>
+      </div>
+    </div>
+  </div><!-- end of LOWER -->
+</footer><!-- end of SCC FOOTER -->
+
+    <!-- JAVASCIPT WARNING -->
+<noscript>
+  <div class="alert alert-danger" role="alert">
+    <h2>Attention: your browser does not have JavaScript enabled!</h2>
+    <p><b>In order to use StockCharts.com successfully, you must enable JavaScript in your browser.</b><br /><a href="https://www.enable-javascript.com" target="_blank">Click Here</a> to learn how to enable JavaScript.</p>
+  </div>
+</noscript>
+
+    <!-- PLUGIN INSTALL MODAL -->
+<div id="modal_pluginInstalled" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times-circle"></i></span></button>
+        <h4 class="modal-title"><i class="fas fa-plug"></i>Plug-In Installed!</h4>
+      </div>
+      <div class="modal-body">
+
+        <p class="info">
+          <b>Success!</b>
+          Your new plug-in has been installed and is ready for use in ACP.
+        </p>
+
+        <p class="info">
+          In the Chart Settings tab of the left sidebar, you'll find the new indicators associated with this plug-in listed under the "Add Indicators" menu.
+          You can add them to your charts just like any other standard indicator.
+          <em>Enjoy!</em>
+        </p>
+        
+        <!-- BUTTON ROW -->
+        <div class="btn-row">
+          <a href="/acp" class="btn btn-blue btn-rounded">Launch ACP&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
+          <button type="button" class="btn-row-link" data-dismiss="modal">Dismiss</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end of PLUGIN INSTALL MODAL -->
+
+    <!-- SCC TRIAL MODAL -->
+<div id="modal_sccTrial" class="modal fade" tabindex="-1" role="dialog">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times-circle"></i></span></button>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="//d.stockcharts.com/img/chartwatchers/stockcharts-signup.jpg" alt="StockCharts Features" class="header-image" />
+        <div class="textwrap">
+          <h4 class="red">This feature is for StockCharts Members only</h4>
+          <h2>Unlock all of our most powerful tools and features</h2>
+          <p>Create bigger, better, more advanced charts. Save them to your account and organize the charts you're watching to streamline your portfolio management. Run custom scans to find new trading and investment opportunities, and set automatic alerts with your own unique technical&nbsp;criteria.</p>
+          <p><b>Start your free 1-month trial in less&nbsp;than&nbsp;60&nbsp;seconds.</b></p>
+          <div class="btn-row">
+            <a href="/checkout/freetrial/" target="_blank" class="btn btn-lightgreen btn-md btn-rounded btn-margin-0"><i class="fas fa-check-circle"></i>&nbsp;&nbsp;Free&nbsp;1-Month&nbsp;Trial</a>
+            <a href="/" class="btn-row-link">Learn&nbsp;More</a>
+            <a data-dismiss="modal" class="btn-row-close">No&nbsp;Thanks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end of SCC TRIAL MODAL -->
+
+    <script>
+  // EASING/SLIDING
+  (function($) {
+    "use strict";
+
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+    $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top)
+        }, 1100, 'easeInOutExpo');
+      event.preventDefault();
+    });
+
+  })(jQuery); // end of USE STRICT
+</script>
+
+    <script>
+  var jsonDomain = "//"+window.location.hostname;
+  
+  $(document).ready(function() {
+    checkInstalled();
+  });
+  
+  function checkInstalled() {
+    $.ajax({
+      url: jsonDomain + "/j-mi/mi",
+      dataType: 'json',
+      data: {
+        cmd: "getacp",
+        r: Math.random()
+      },
+      xhrFields: {withCredentials: true},
+      success: function (data) {
+        for (var i = 0; i < data.length; i++) {
+          // SET PLUG-IN ID HERE
+          if (data[i].id == "7" && data[i].installed) {
+            $('#shopfiy-wrapper').remove();
+            $('#installedButton-wrapper').show();
+          }
+        }
+      }, 
+      error: function (jqXHR, textStatus, errorThrown) {}
+    });
+  }
+</script>
+
+  </body>
+</html>

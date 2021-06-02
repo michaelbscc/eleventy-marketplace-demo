@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/scc-html-head', {
+      metaDescription: 'Anticipate trend changes more accurately and confidently with the Real Motion plug-in for StockChartsACP',
+      metaOgTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
+      metaTwitterTitle: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com',
+      metaOgImage: 'https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
+      metaTwitterImage: 'https://d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
+      title: 'Real Motion by MarketGauge | ACP Plug-Ins | StockCharts.com'
+    }); -%>
+  </head>
+  <body id="page-top">
+    <% include ../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../partials/marketplace-header', {
+        plugInName: '"Real&nbsp;Motion" by MarketGauge'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-marketgauge-realmotion.jpg',
+                  imageAlt: 'MarketGauge Real Motion ACP Plug-In'
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../partials/marketplace-title', {
+                    title: 'Anticipate Trend Changes More Accurately and Confidently With Real&nbsp;Motion',
+                    price: '$497.00'
+                  }); -%>
+
+                  <%- include('../partials/shopify-buy-btn', {
+                    productId: '4871055605862',
+                    productComponentId: 'product-component-1593400200783'
+                  }); -%>
+
+                  <p>
+                    Price trends are influenced by factors we can't see in the price charts alone.
+                    One of the most influential of these invisible factors that determine price trends is momentum.
+                    This plug-in enables you to see the trends, and support and resistance levels in momentum that are influencing price trends.
+                    With Real&nbsp;Motion, you can successfully trade reversals, breakouts and breakdowns in any market or any time frame.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <span class="feature-name">About the "Real&nbsp;Motion" Indicator</span>
+                      <span class="feature-description">Real&nbsp;Motion reveals support, resistance, and trends in momentum that enable you to anticipate support, resistance and trends in price that other traders can't see until it's too late.</span>
+                    </li>
+                  </ul>
+
+                  <%- include('../partials/youtube-video', {
+                    youtubeLink: 'https://www.youtube.com/embed/Y4yU9qR1NrY'
+                  }); -%>
+
+                  <%- include('../partials/help-center-alert', {
+                    helpCenterLink: 'https://support.stockcharts.com/doku.php?id=acp:plugins:marketgauge',
+                    plugInTitle: 'Real Motion'
+                  }); -%>
+
+                  <% include ../partials/marketgauge-bio %>
+
+                  <% include ../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+                  
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+          
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../partials/scc-footer %>
+    <% include ../partials/scc-noscript %>
+    <% include ../partials/plug-in-install-modal %>
+    <% include ../partials/scc-trial-modal %>
+    <% include ../partials/scc-easing-sliding-js %>
+    <% include ../partials/plug-in-install-check-js %>
+  </body>
+</html>
