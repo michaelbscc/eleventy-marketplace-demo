@@ -19,7 +19,7 @@
       success: function (data) {
         for (var i = 0; i < data.length; i++) {
           // SET PLUG-IN ID HERE
-          if (data[i].id == "4" && data[i].installed) {
+          if (data[i].id == "<%= plugInId %>" && data[i].installed) {
             $('#buyButton').html('<i class="fas fa-check-circle"></i>&nbsp;&nbsp;INSTALLED');
             $('#buyButton').prop('disabled', true);
           }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../../partials/html-head-meta %>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="NAME OF PLUGIN | ACP Plug-Ins | StockCharts.com" />
+    <meta name="twitter:title" content="NAME OF PLUGIN | ACP Plug-Ins | StockCharts.com" />
+    <meta property="og:image" content="https://d.stockcharts.com/img/plugin-NAME.jpg" />
+    <meta name="twitter:image" content="https://d.stockcharts.com/img/plugin-NAME.jpg" />
+
+    <title>NAME OF PLUGIN | ACP Plug-Ins | StockCharts.com</title>
+
+    <% include ../../partials/scc-html-head %>
+
+    <% include ../../partials/scc-html-head-free-plug-in-login-js %>
+  </head>
+  <body id="page-top">
+    <% include ../../partials/scc-navbar %>
+
+    <!-- PAGEBODY -->
+	  <div id="pagebody">
+      <%- include('../../partials/marketplace-header', {
+        plugInName: '"NAME OF PLUGIN" by CREATOR'
+      }); -%>
+
+      <!-- PAGECONTENTS -->
+      <div id="pagecontents">
+
+        <div class="container-fluid">
+            
+          <!-- ABOUT PRODUCT -->
+          <div id="aboutProduct" class="section bg-white">
+            <div class="container">
+              <div class="row">
+
+                <%- include('../../partials/marketplace-product-banner', {
+                  imagePath: '//d.stockcharts.com/img/plugin-advanced-indicator-pack.jpg',
+                  imageAlt: ''
+                }); -%>
+
+                <div class="col-md-8 col-sm-9 col-xs-12 product-body">
+                  <%- include('../../partials/marketplace-title', {
+                    title: 'Catchy headline to capture the user\'s attention and hook them into learning more about the plug-in',
+                    price: '$00.00'
+                  }); -%>
+
+                  <% include ../../partials/free-plug-in-install-btn %>
+
+                  <p>
+                    A short intro paragraph goes here to describe your ACP plug-in and give the user a bit more insight into what they can expect from this unique product.
+                    This could be maybe two to four sentences, just enough to provide some crucial details that will clarify what this plug-in is and why the user will benefit from purchasing it.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <span class="feature-name">1. NAME</span>
+                      <span class="feature-description">description</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">2. NAME</span>
+                      <span class="feature-description">description</span>
+                    </li>
+                    <li>
+                      <span class="feature-name">3. NAME</span>
+                      <span class="feature-description">description</span>
+                    </li>
+                  </ul>
+
+                  <%- include('../../partials/help-center-alert', {
+                    helpCenterLink: '',
+                    plugInTitle: 'NAME OF PLUGIN'
+                  }); -%>
+
+                  <%- include('../../partials/youtube-video', {
+                    youtubeLink: 'https://www.youtube.com/embed/qi5FPu-kMy0'
+                  }); -%>
+
+                  <h2><i class="fas fa-fw fa-user-tie"></i>&nbsp;About The Creator</h2>
+
+                  <p>
+                    more information
+                  </p>
+
+                  <% include ../../partials/plug-in-general-info %>
+
+                </div>
+              </div>
+
+            </div>
+          </div><!-- end of ABOUT PRODUCT -->
+
+        </div><!-- end of .CONTAINER-FLUID -->
+      </div><!-- end of #PAGECONTENTS -->
+    </div><!-- end of #PAGEBODY -->
+
+    <% include ../../partials/scc-footer %>
+    <% include ../../partials/scc-noscript %>
+    <% include ../../partials/plug-in-install-modal %>
+    <% include ../../partials/scc-trial-modal %>
+    <% include ../../partials/scc-easing-sliding-js %>
+    <%- include('../../partials/free-plug-in-install-check-js', {
+      plugInId: '0'
+    }); -%>
+  </body>
+</html>

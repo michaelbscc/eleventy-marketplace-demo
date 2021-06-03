@@ -1,0 +1,732 @@
+/* ------- */
+
+
+/* GENERAL */
+
+
+/* ------- */
+
+p.info {
+  max-width: none;
+}
+
+.partner-filter {
+  display: none;
+}
+
+
+/* ------------------ */
+
+
+/* MARKETPLACE HEADER */
+
+
+/* ------------------ */
+
+#marketplace-header {
+  z-index: 1;
+  position: relative;
+  padding: 90px 0;
+  background-color: #243342;
+}
+
+#marketplace-header.header-slim {
+  padding: 45px 0;
+}
+
+
+/* BACKGROUND IMAGE */
+
+#marketplace-header .partner-center-bg {
+  background: url(//d.stockcharts.com/img/bg-partner-center.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  opacity: 0.35;
+}
+
+#marketplace-header .plugins-header-bg {
+  background: url(//d.stockcharts.com/img/bg-cyber-06.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  opacity: 0.35;
+}
+
+
+/* TEXT COLUMN */
+
+#marketplace-header .text-col {
+  text-align: center;
+}
+
+#marketplace-header h1 {
+  margin: 0 auto;
+  line-height: 1.40;
+  font-family: 'Roboto Condensed', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+  color: #fff;
+}
+
+#marketplace-header h1.script-font {
+  font-family: 'Pacifico', 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+#marketplace-header h3 {
+  margin: 0 auto 30px auto;
+  line-height: 1.40;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fff;
+}
+
+#marketplace-header.header-slim h3 {
+  margin-bottom: 15px;
+}
+
+#marketplace-header h3 a {
+  color: #fff !important;
+}
+
+#marketplace-header h3 a:hover {
+  border-bottom: 1px dotted #fff;
+  color: #fff !important;
+}
+
+#marketplace-header p.series-description {
+  max-width: 991px;
+  margin: 15px auto 0 auto;
+  line-height: 1.40;
+  font-size: 16px;
+  font-weight: normal;
+  color: #c0ced8;
+}
+
+
+/* MARKETPLACE HEADER MEDIA QUERIES */
+
+@media (max-width:767px) {
+  #marketplace-header {
+      padding: 60px 0;
+  }
+  #marketplace-header.header-slim {
+      padding: 15px 0;
+  }
+  #marketplace-header h1 {
+      font-size: 30px;
+  }
+  #marketplace-header h1.script-font {
+      font-size: 45px;
+  }
+  #marketplace-header h3 {
+      font-size: 22px;
+  }
+}
+
+
+/* ------------- */
+
+
+/* ABOUT PRODUCT */
+
+
+/* ------------- */
+
+#aboutProduct .product-sidebar {
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+
+#aboutProduct .product-banner img {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #333;
+}
+
+
+/* BODY */
+
+#aboutProduct .product-body {
+  padding: 0 15px 30px 30px;
+}
+
+#aboutProduct .product-body .btn-row {
+  margin-bottom: 30px;
+}
+
+#aboutProduct .product-body #buyButton-wrapper,
+#aboutProduct .product-body #freeButton-wrapper {
+  margin-top: 30px;
+}
+
+#aboutProduct .product-body #buyButton-wrapper .btn,
+#aboutProduct .product-body #freeButton-wrapper .btn {
+  min-width: 185px;
+}
+
+
+/* HEADLINES */
+
+#aboutProduct .product-body h2 {
+  margin: 30px auto 15px auto;
+  line-height: 1.30;
+  font-family: 'Roboto Condensed', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: #383f47;
+}
+
+#aboutProduct .product-body h2.title-blue {
+  color: #0f4d8a;
+}
+
+#aboutProduct .product-body h4 {
+  margin: 0 auto 15px auto;
+  line-height: 1.40;
+  font-size: 20px;
+  font-weight: bold;
+  color: #5a6672;
+}
+
+#aboutProduct .product-body h4.plugin-price {
+  margin-bottom: 0;
+}
+
+#aboutProduct .product-body h4 span {
+  color: #383f47;
+}
+
+
+/* TEXT */
+
+#aboutProduct .product-body p,
+#aboutProduct .product-body ul,
+#aboutProduct .product-body ol {
+  margin: 0 auto 15px auto;
+  line-height: 1.60;
+  font-size: 16px;
+  font-weight: normal;
+  color: #434c56;
+}
+
+
+/* WORD BREAK FIX */
+
+#aboutProduct .product-body p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-hyphens: auto;
+  word-break: break-word;
+}
+
+
+/* SUBNOTE */
+
+#aboutProduct .product-body p.subnote {
+  color: #707f8f;
+  font-size: 14px;
+}
+
+
+/* LINK */
+
+#aboutProduct .product-body p a,
+#aboutProduct .product-body ul a,
+#aboutProduct .product-body ol a {
+  border-bottom: 1px dotted #0f4d8a;
+  font-weight: bold;
+}
+
+
+/* LIST */
+
+#aboutProduct .product-body ul,
+#aboutProduct .product-body ol {
+  padding: 0 0 0 15px;
+}
+
+#aboutProduct .product-body ul li,
+#aboutProduct .product-body ol li {
+  padding: 10px 0;
+}
+
+#aboutProduct .product-body ul {
+  list-style: none;
+}
+
+#aboutProduct .product-body ul li .feature-name,
+#aboutProduct .product-body ol li .feature-name {
+  display: block;
+  font-weight: 900;
+}
+
+#aboutProduct .product-body ul li .feature-description,
+#aboutProduct .product-body ol li .feature-description {
+  display: block;
+  margin-top: 5px;
+  line-height: 1.25;
+  font-size: 14px;
+  font-weight: normal;
+  color: #707f8f;
+}
+
+
+/* IMAGES */
+
+#aboutProduct .product-body img {
+  display: block;
+  width: 100%;
+  max-width: 767px;
+  margin: 15px auto;
+}
+
+#aboutProduct .product-body img.small {
+  max-width: 320px;
+}
+
+#aboutProduct .product-body img.extrasmall {
+  max-width: 200px;
+}
+
+#aboutProduct .product-body img.img-margin-30 {
+  margin: 30px auto;
+}
+
+#aboutProduct .product-body p.img-caption {
+  margin: -5px auto 15px auto;
+  text-align: center;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.40;
+  font-size: 14px;
+  color: #707f8f;
+}
+
+
+/* VIDEO EMBED */
+
+#aboutProduct .product-body .video-embed {
+  display: block;
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 3px;
+  background: #000;
+}
+
+
+/* LINE */
+
+#aboutProduct .product-body hr#line-break {
+  display: none !important;
+}
+
+
+/* BLOCKQUOTE */
+
+#aboutProduct .product-body blockquote {
+  margin: 25px 0;
+  padding: 15px;
+  border-left: 10px solid #c0ced8;
+}
+
+#aboutProduct .product-body blockquote p {
+  margin: 0;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.40;
+  font-size: 25px;
+  font-weight: bold;
+  color: #0f4d8a;
+}
+
+
+/* ALERT */
+
+#aboutProduct .product-body .alert.more-info {
+  margin: 30px auto 0 auto;
+}
+
+
+/* ABOUT PRODUCT MEDIA QUERIES */
+
+@media (max-width:767px) {
+  #aboutProduct .product-banner img {
+      max-width: 200px;
+  }
+  #aboutProduct .product-body {
+      padding-left: 15px;
+  }
+  #aboutProduct .product-body ul,
+  #aboutProduct .product-body ol {
+      padding-left: 20px;
+  }
+  #aboutProduct blockquote p {
+      font-size: 22px;
+  }
+}
+
+
+/* --------------------- */
+
+
+/* PARTNER CENTER HEADER */
+
+
+/* --------------------- */
+
+#partnerCenter-header {
+  z-index: 1;
+  position: relative;
+  padding: 90px 0;
+  background-color: #243342;
+}
+
+#partnerCenter-header.header-slim {
+  padding: 45px 0;
+}
+
+
+/* BACKGROUND IMAGE */
+
+#partnerCenter-header .partner-center-bg {
+  background: url(//d.stockcharts.com/img/bg-partner-center.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  opacity: 0.35;
+}
+
+
+/* TEXT COLUMN */
+
+#partnerCenter-header .text-col {
+  text-align: center;
+}
+
+#partnerCenter-header h1 {
+  margin: 0 auto;
+  line-height: 1.40;
+  font-family: 'Roboto Condensed', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+  color: #fff;
+}
+
+#partnerCenter-header h1.script-font {
+  font-family: 'Pacifico', 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+#partnerCenter-header h3 {
+  margin: 0 auto 30px auto;
+  line-height: 1.40;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fff;
+}
+
+#partnerCenter-header.header-slim h3 {
+  margin-bottom: 15px;
+}
+
+#partnerCenter-header p.series-description {
+  max-width: 991px;
+  margin: 15px auto 0 auto;
+  line-height: 1.40;
+  font-size: 16px;
+  font-weight: normal;
+  color: #c0ced8;
+}
+
+
+/* PARTNER CENTER HEADER MEDIA QUERIES */
+
+@media (max-width:767px) {
+  #partnerCenter-header {
+      padding: 60px 0;
+  }
+  #partnerCenter-header.header-slim {
+      padding: 15px 0;
+  }
+  #partnerCenter-header h1 {
+      font-size: 30px;
+  }
+  #partnerCenter-header h1.script-font {
+      font-size: 45px;
+  }
+  #partnerCenter-header h3 {
+      font-size: 22px;
+  }
+}
+
+
+/* ------------ */
+
+
+/* PARTNER GRID */
+
+
+/* ------------ */
+
+.partner-grid .partner-col {
+  padding-bottom: 30px;
+}
+
+.partner-grid .partner-card {
+  padding: 15px;
+  background-color: #f2f5f7;
+  border-bottom: 3px solid #c0ced8;
+}
+
+.partner-grid .partner-card.card-light {
+  background-color: #fff;
+}
+
+.partner-grid .col-header {
+  padding: 0 5px 10px 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c0ced8;
+}
+
+.partner-grid .partner-card.product-partner .col-header {
+  padding-bottom: 3px;
+}
+
+.partner-grid .col-header img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+  font-size: 10px;
+  color: #707f8f;
+}
+
+.partner-grid .col-header img.partner-headshot {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.partner-grid .col-header img.partner-logo {
+  max-height: 70px;
+  max-width: 300px;
+}
+
+.partner-grid .col-header h3 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-family: 'Roboto Condensed', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+  font-size: 28px;
+  font-weight: 900;
+  color: #2d3339;
+}
+
+.partner-grid .col-header .product-label {
+  display: inline-block;
+  margin: 0 0 8px 0;
+  padding: 3px 6px;
+  background-color: #707f8f;
+  border: 0;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.partner-grid .col-header .product-label.label-dark {
+  background-color: #16191d;
+}
+
+.partner-grid .col-header .product-label.label-blue {
+  background-color: #0f4d8a;
+}
+
+.partner-grid .col-header .product-label.label-lightblue {
+  background-color: #3281d0;
+}
+
+.partner-grid .col-header .product-label.label-green {
+  background-color: #219155;
+}
+
+.partner-grid .col-header .product-label.label-red {
+  background-color: #cc000e;
+}
+
+.partner-grid .col-header .product-label.label-orange {
+  background-color: #f9690e;
+}
+
+.partner-grid .col-header .product-label.label-yellow {
+  background-color: #f8d23a;
+}
+
+.partner-grid .col-header .product-label.label-purple {
+  background-color: #8740a5;
+}
+
+.partner-grid p.info {
+  margin: 0;
+}
+
+.partner-grid p.info.info-margin-15 {
+  margin-bottom: 15px;
+}
+
+.partner-grid .btn-row {
+  margin: 10px 0 0 0;
+  text-align: right;
+}
+
+.partner-grid .btn-row .btn-sm {
+  padding: 5px 10px;
+}
+
+
+/* PRODUCT GRID */
+
+.partner-grid.product-grid .col-header h3 {
+  display: block;
+}
+
+.partner-grid.product-grid .product-image {
+  display: block;
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+
+.partner-grid.product-grid .product-image img {
+  max-width: 300px;
+  max-height: 175px;
+}
+
+.partner-grid.product-grid .btn-row {
+  margin-top: 20px;
+  text-align: left;
+}
+
+
+/* PARTNER GRID MEDIA QUERIES */
+
+@media (min-width:992px) {
+  .partner-grid.product-grid .product-image.floated {
+      display: inline-block;
+      float: left;
+      margin: 0 10px 10px 0;
+      text-align: left;
+  }
+}
+
+
+/* ------------- */
+
+
+/* ABOUT PARTNER */
+
+
+/* ------------- */
+
+#aboutPartner .partner-headshot img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+
+/* SIDEBAR */
+
+#aboutPartner .about-partner-sidebar {
+  padding: 30px 15px;
+  background-color: #f2f5f7;
+  border-bottom: 3px solid #c0ced8;
+  text-align: center;
+}
+
+#aboutPartner .about-partner-sidebar .partner-headshot {
+  height: 125px;
+  width: 125px;
+  margin: 0 auto 15px auto;
+}
+
+#aboutPartner .partner-title {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #c0ced8;
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5a6672;
+}
+
+#aboutPartner .partner-website {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #c0ced8;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#aboutPartner .partner-social {
+  margin: 0 auto;
+}
+
+#aboutPartner .partner-social a {
+  margin: 0 5px 0 0;
+  line-height: 1;
+  font-size: 30px;
+}
+
+
+/* BODY */
+
+#aboutPartner .about-partner-body {
+  padding: 30px 15px 30px 30px;
+}
+
+#aboutPartner .about-partner-body .partner-headshot {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin: 15px 30px 10px 0;
+}
+
+#aboutPartner .about-partner-body .partner-social {
+  margin: 15px 0 0 0;
+}
+
+#aboutPartner .about-partner-body .alert.more-info {
+  margin: 30px auto 0 auto;
+}
+
+
+/* ABOUT PARTNER MEDIA QUERIES */
+
+@media (min-width:768px) {
+  #aboutPartner .about-partner-body .partner-headshot,
+  #aboutPartner .about-partner-body .partner-social {
+      display: none;
+  }
+}
+
+@media (max-width:767px) {
+  #aboutPartner .about-partner-sidebar {
+      display: none;
+  }
+  #aboutPartner .about-partner-body {
+      padding-left: 15px;
+  }
+}

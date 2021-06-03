@@ -1,5 +1,5 @@
 module.exports = {
   permalink: (data) => {
-    return data.page.filePathStem + '.html';
+    return `${data.page.filePathStem}.html`;
   }
 };
