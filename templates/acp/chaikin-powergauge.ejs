@@ -170,7 +170,10 @@
                     The Chaikin Power&nbsp;Gauge Rating is the centerpiece of Chaikin&nbsp;Analytics, and is now available on StockCharts via the Chaikin&nbsp;Analytics plug-in for ACP.
                   </p>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: false,
+                    plugInName: ''
+                  }); -%>
 
                 </div>
               </div>

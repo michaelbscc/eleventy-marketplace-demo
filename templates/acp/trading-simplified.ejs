@@ -93,7 +93,10 @@
                       In addition to his weekly show on StockCharts TV, Dave has made several television appearances, written articles for numerous financial magazines and journals, and has spoken at trading conferences both nationally and internationally.
                   </p>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: false,
+                    plugInName: ''
+                  }); -%>
 
                 </div>
               </div>

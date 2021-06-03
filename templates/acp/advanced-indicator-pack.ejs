@@ -84,7 +84,10 @@
                     </li>
                   </ul>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: false,
+                    plugInName: ''
+                  }); -%>
 
                 </div>
               </div>

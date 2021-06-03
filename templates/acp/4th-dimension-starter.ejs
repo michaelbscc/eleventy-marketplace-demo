@@ -78,7 +78,10 @@
                     Shaun supports his client base in the use of his unique methods via mentoring, consulting, and ongoing education and analysis.
                   </p>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: false,
+                    plugInName: ''
+                  }); -%>
 
                 </div>
               </div>

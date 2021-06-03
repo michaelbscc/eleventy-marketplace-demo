@@ -86,7 +86,10 @@
 
                   <% include ../../partials/marketgauge-bio %>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: true,
+                    plugInName: 'Triple Play Indicators'
+                  }); -%>
 
                 </div>
               </div>

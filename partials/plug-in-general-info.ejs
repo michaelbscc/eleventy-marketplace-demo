@@ -3,9 +3,12 @@
 <p>
   With exclusive plug-ins from a wide variety of renowned indicator creators, technical experts and charting legends, we've partnered with the industry's best to bring you even more charting power in ACP.
   By installing any of our unique plug-ins, you can instantly enhance your ACP experience with additional indicators, overlays, chart customizations and more.
-  <br />
-  <br />
-  <b>Please note: the "Trend Investor Pro Indicator&nbsp;Edge" plug-in for ACP is non-refundable.</b>
+
+  <% if (nonRefundable) { %>
+    <br />
+    <br />
+    <b>Please note: the "<%= plugInName %>" plug-in for ACP is non-refundable.</b>
+  <% } %>
 </p>
 
 <h2><i class="fas fa-fw fa-info-circle"></i>&nbsp;How It Works</h2>

@@ -115,7 +115,10 @@
                     On October 6, 2002 the mayor of San Diego declared that day as Larry Williams' Day.
                   </p>
 
-                  <% include ../../partials/plug-in-general-info %>
+                  <%- include('../../partials/plug-in-general-info', {
+                    nonRefundable: true,
+                    plugInName: 'Larry Williams Stock Trading Starter Pack'
+                  }); -%>
 
                 </div>
               </div>
